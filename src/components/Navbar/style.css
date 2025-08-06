@@ -1,0 +1,10 @@
+.navbar-block {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-block img {
+    height: 85%;
+}

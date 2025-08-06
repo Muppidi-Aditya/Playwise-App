@@ -1,0 +1,103 @@
+.song-block {
+    height: 80px;
+    width: 100%;
+    color: white;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.song-block img {
+    height: 100%;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.sub-block {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sub-block h1 {
+    font-size: 22px;
+    font-weight: 550;
+    font-family: 'Outfit', sans-serif;
+}
+
+.song-block p {
+    flex-shrink: 0;
+    font-size: 24px;
+    font-family: 'Outfit', sans-serif;
+    color: #ff3130;
+}
+
+/* Add hover effects and transitions to the existing song-block */
+.song-block {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .song-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .song-block:active {
+    transform: translateY(0);
+  }
+  
+  /* Optional: Add a subtle play icon overlay on hover */
+  .song-block::after {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #ff3130;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .song-block:hover::after {
+    opacity: 1;
+  }
+  
+  /* Make sure the song-block has relative positioning for the play icon */
+  .song-block {
+    position: relative;
+  }
+
+  .add-to-playlist-button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #ff3130 0%, #dc2626 100%);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(255, 49, 48, 0.3);
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+
+  .add-to-playlist-button:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 16px rgba(255, 49, 48, 0.4);
+  }
